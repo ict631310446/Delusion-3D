@@ -50,6 +50,9 @@ namespace StarterAssets
         [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
         public bool Grounded = true;
 
+        [Header("Player Crouch")]
+        public bool Crouch = true;
+
         [Tooltip("Useful for rough ground")]
         public float GroundedOffset = -0.14f;
 
@@ -279,6 +282,14 @@ namespace StarterAssets
             {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+                if (Input.GetKey(KeyCode.LeftShift)) //_input.crouch
+                {
+                    _animator.SetBool(_animIDCrouch, Crouch);
+                }
+                else
+                {
+                    _animator.SetBool(_animIDCrouch, false);
+                }
             }
         }
 
