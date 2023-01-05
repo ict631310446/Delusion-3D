@@ -80,7 +80,6 @@ namespace StarterAssets
 		public void CrouchInput(bool newCrouchState)
 		{
 			crouch = newCrouchState;
-			Debug.Log("Crourh Buttom is Pressed");
 		}
         //********************************************************************
 

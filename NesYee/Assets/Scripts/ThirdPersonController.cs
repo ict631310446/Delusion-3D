@@ -293,11 +293,6 @@ namespace StarterAssets
             }
         }
 
-        private void HandleCrouch()
-        {
-
-        }
-
         private void JumpAndGravity()
         {
             if (Grounded)
